@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DeepLung - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <img src="{{ url_for('static', filename='deepLung_logo.png') }}" alt="DeepLung logo" id="site-logo">
+        <nav class="nav-bar">
+            <a href="/home" class="nav-link">Home</a> |
+            <a href="/about" class="nav-link">About</a> |
+            <a href="/services" class="nav-link">Services</a>
+        </nav>
+        <nav class="auth-links">
+            <a href="/login" class="auth-link">Login</a> |
+            <a href="/signup" class="auth-link">Sign-up</a>
+        </nav>
+    </header>
+    <section>
+        <h1>Welcome to DeepLung</h1>
+        <p>DeepLung is a cutting-edge lung disease detection system powered by deep learning algorithms.</p>
+    </section>
+    <section>
+        <h2>Services</h2>
+        <p>Our services include image analysis, disease classification, result visualization, and data storage.</p>
+    </section>
+    <section>
+        <h2>How To Use?</h2>
+        <p>Simply register, upload your X-Ray images, and receive analysis results within minutes.</p>
+    </section>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <img src="{{ url_for('static', filename='deepLung_vi-03.png') }}" id="footer-logo">
+            <p>&copy; 2023 DeepLung. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

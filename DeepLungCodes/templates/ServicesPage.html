@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DeepLung - Services</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <img src="{{ url_for('static', filename='deepLung_logo.png') }}" alt="DeepLung logo" id="site-logo">
+        <nav class="nav-bar">
+            <a href="/home" class="nav-link">Home</a> |
+            <a href="/about" class="nav-link">About</a> |
+            <a href="/services" class="nav-link">Services</a>
+        </nav>
+        <nav class="auth-links">
+            <a href="/login" class="auth-link">Login</a> |
+            <a href="/signup" class="auth-link">Sign-up</a>
+        </nav>
+    </header>
+    <main class="service-content">
+        <section class="service-section">
+            <h1 class="service-title">Services</h1>
+            <div id="image-display">
+                <!-- The uploaded image will be displayed here -->
+            </div>
+            <form id="image-form" enctype="multipart/form-data"> 
+                <div class="form-line">
+                    <input type="file" id="image-upload" name="image" accept="image/*">
+                    <button type="submit" class="submit-image">Submit Image</button>
+                    <button type="button" class="delete-image" onclick="deleteImage()">Delete Image</button>
+                </div>
+            </form>
+            <div id="prediction-display">
+                <!-- The prediction will be displayed here -->
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <img src="{{ url_for('static', filename='deepLung_vi-03.png') }}" id="footer-logo">
+            <p>&copy; 2023 DeepLung. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='predict.js') }}"></script>
+</body>
+</html>

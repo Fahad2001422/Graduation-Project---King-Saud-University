@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DeepLung - Home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles.css') }}">
+</head>
+    <body>
+        <header class="site-header">
+            <img src="{{ url_for('static', filename='deepLung_logo.png') }}" alt="DeepLung logo" id="site-logo">
+            <nav class="nav-bar">
+                <a href="/home" class="nav-link">Home</a> |
+                <a href="/about" class="nav-link">About</a> |
+                <a href="/services" class="nav-link">Services</a>
+            </nav>
+            <nav class="auth-links">
+                <a href="/login" class="auth-link">Login</a> |
+                <a href="/signup" class="auth-link">Sign-up</a>
+            </nav>
+        </header>
+        <div class="signup-form-container">
+            <h2>Create account</h2>
+            <form action="/signup" method="post" class="signup-form">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required><br>
+                <label for="dlicense">Dr. License:</label>
+                <input type="text" id="dlicense" name="dlicense" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <label for="cpassword">Confirm Password:</label>
+                <input type="password" id="cpassword" name="cpassword" required><br>
+                <input type="submit" value="Create Account">
+            </form>
+            <p class="center-text">Already have an account? <a href="/login">Login</a></p>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <img src="{{ url_for('static', filename='deepLung_vi-03.png') }}" id="footer-logo">
+                <p>&copy; 2023 DeepLung. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
